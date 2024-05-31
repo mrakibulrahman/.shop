@@ -150,6 +150,56 @@ h4 {
 .mobile-hide {
     display: none;
 }
+
+.object-cover img{
+    position: absolute;
+    object-fit: cover;
+    width: var(--percent100);
+    height: var(--percent100);
+    display: block;
+}
+.products .media{
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.primary-button, .secondary-button, .light-button{
+    font-size: var(--font-small);
+    padding: 0.9em 2em;
+    height: auto;
+    width: fit-content;
+    border-radius: 2em;
+    transition: var(--trans-background-color);
+}
+.primary-button{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.primary-button:hover{
+    background-color: var(--dark-color);
+}
+.secondary-button{
+    background-color: var(--secondary-dark-color);
+    color: var(--white-color);
+}
+.secondary-button:hover{
+    background-color: var(--light-bg-color);
+    color: var(--secondary-dark-color);
+}
+.light-button{
+    background-color: var(--light-bg-color);
+}
+.light-button:hover{
+    background-color: var(--secondary-dark-color);
+    color: var(--white-color);
+}
+.view-all{
+    font-size: var(--font-small);
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    transition: var(--trans-color);
+}
 /* ========== reusable selector ========== */
 
 /* ========== sturture styling ========== */
@@ -190,7 +240,6 @@ h4 {
     12. PAGE CART
     13. PAGE CHECKOUT
     14. MODAL
-    15. RESPONSIVE
  */
 /* ========== sturture styling ========== */
 
@@ -243,7 +292,7 @@ header li > a {
     *---------------------------------- */
 
 .header-nav {
-    padding: 0;
+    padding: 0.5rem 0;
     margin-bottom: 1.5em;
     border-bottom: 1px solid var(--border-color);
 }
@@ -319,6 +368,13 @@ nav .fly-item{
     width: 16px;
     background-color: var(--secondary-dark-color);
     border-radius: var(--percent50);
+}
+.mega .flexcol{
+    flex: 1;
+    min-width: 180px;
+    padding-right: 2.5em;
+    margin-bottom: 1.5em;
+    z-index: 1;
 }
     /* 01. HEADER ------------------------
     *   c. Header Main, Department Catagory
@@ -596,27 +652,3 @@ nav .fly-item{
 
 
 
-/* ========== 15. RESPONSIVE ========== */
-
-@media screen and (min-width: 992px) {
-    .container {
-        padding: 0 2em;
-    }
-    .desktop-hide {
-        display: none;
-    }
-    .mobile-hide {
-        display: block;
-    }
-    .logo {
-        margin-right: 2em;
-    }
-    .header-nav {
-        padding: 0;
-        margin: 0;
-        border-bottom: 0;
-    }
-    .header-nav .right li > a {
-        margin-left: 1em;
-    }
-}
